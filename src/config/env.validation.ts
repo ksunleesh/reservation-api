@@ -2,7 +2,8 @@ import { Logger } from '@nestjs/common';
 import z from 'zod';
 
 const envSchema = z.object({
-  PORT: z.coerce.number().int().positive().min(0).max(65535)
+  PORT: z.coerce.number().int().positive().min(0).max(65535),
+  DATABASE_URL: z.url()
 });
 
 export function validate(config: Record<string, any>) {
