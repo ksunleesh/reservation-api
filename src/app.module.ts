@@ -5,7 +5,7 @@ import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './auth/auth.module';
 import { ReservationModule } from './reservation/reservation.module';
 import { PaymentModule } from './payment/payment.module';
-import { AuthController } from './no--spec/auth/auth.controller';
+import { AuthController } from './auth/auth.controller';
 
 @Module({
   imports: [

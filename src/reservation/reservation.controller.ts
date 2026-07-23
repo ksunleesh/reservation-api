@@ -1,4 +1,19 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
 
-@Controller('reservation')
-export class ReservationController {}
+@Controller('reservations')
+export class ReservationController {
+  @Post('')
+  createReservation() {}
+
+  @Get('')
+  getAllReservations() {}
+
+  @Get(':id')
+  getReservationById() {}
+
+  @Patch(':id')
+  updateReservationByID() {}
+
+  @Delete(':id')
+  deleteReservationByID() {}
+}
