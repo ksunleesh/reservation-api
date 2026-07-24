@@ -2,8 +2,9 @@ import { Logger } from '@nestjs/common';
 import z from 'zod';
 
 const envSchema = z.object({
-  PORT: z.coerce.number().int().positive().min(0).max(65535),
-  DATABASE_URL: z.url()
+  PORT: z.coerce.number().int().positive().max(65535),
+  DATABASE_URL: z.url(),
+  SALT_ROUNDS: z.coerce.number().int().min(10).max(31).default(12)
 });
 
 export function validate(config: Record<string, any>) {
